@@ -11,20 +11,37 @@
   <% end%>
 
 <% end %>
-<%= form_for @article do |f|%>
-  <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </p>
 
-  <p>
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </p>
+<div class="row">
+  <div class="col-md-12">
+    <%= form_for(@article, :html => {class: "offset-lg-2 offset-sm-2"}) do |f|%>
 
-  <p>
-    <%= f.submit %> 
-  </p>
+      <div class="form-group row">
+        <label class="col-lg-1 col-sm-2 col-form-label">
+          <%= f.label :title %>
+        </label> 
+        <div class="col-sm-7">
+          <%= f.text_field :title, class: "form-control", placeholder: "Title of Article" %>
+        </div>
+      </div>
 
-<%end%>
-<%= link_to "Back to Articles", articles_path %>
+      <div class="form-group row">
+        <label class="col-lg-1 col-sm-2 col-form-label">
+          <%= f.label :description %>
+        </label> 
+        <div class="col-sm-7">
+          <%= f.text_area :description, rows: 8, class: "form-control", placeholder: "Description of Article" %>
+        </div>
+      </div>
+  
+      <div class="article-button">
+        <%= f.submit class: "btn btn-outline-info btn-lg offset-sm-2 offset-lg-1"%> 
+      </div>
+
+    <%end%>
+  
+  </div>
+</div>
+<div class="col-xs-4 offset-sm-6 mb-5">
+  [ <%= link_to "Go Back to Articles Page", articles_path, class: "link" %> ]
+</div>
