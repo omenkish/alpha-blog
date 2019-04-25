@@ -1,0 +1,13 @@
+.jumbotron {
+  background-image: asset-url('dandelion.jpg');
+  background-size: cover;
+  height: 550px;
+}
+
+.jumbotron h1 {
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: -1px;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
