@@ -13,3 +13,11 @@ a:hover {
   text-decoration: none;
   color: rgba(0,0,0,0.5);
 }
+
+.btn-sm, .btn-group-sm > .btn {
+  min-width: 5em;
+}
+
+.mt-5, .my-5 {
+  margin-top: 5rem !important;
+}

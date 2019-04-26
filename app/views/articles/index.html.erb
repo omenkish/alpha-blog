@@ -1,5 +1,4 @@
-<h1 class="form-title">Listing all articles </h1>
-<p><%= link_to "Create new article", new_article_path %></p>
+<h1 class="form-title mt-5 mb-3">Listing all articles </h1>
 
 <% @articles.each do |article| %>
   <div class="row">
@@ -14,7 +13,7 @@
           <div class="article-meta-details">
             <small>
               created by: <%= article.user.username if article.user %>,
-              <%= time_ago_in_words(article.created_at) %> ago,
+              <%= time_ago_in_words(article.created_at) %> ago.
               <%= " Last updated: #{time_ago_in_words(article.updated_at)} ago" if article.updated_at > article.created_at %> 
             </small>
           </div>

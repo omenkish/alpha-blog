@@ -1,0 +1,41 @@
+<%= render 'shared/errors', obj: @user %>
+
+<div class="row ">
+  <div class="col-md-12">
+    <%= form_for(@user, :html => {class: "offset-lg-3 offset-sm-3"}) do |f|%>
+
+      <div class="form-group row">
+        <label class="col-lg-1 col-sm-2 col-form-label">
+          <%= f.label :username %>
+        </label> 
+        <div class="col-sm-6">
+          <%= f.text_field :username, class: "form-control", placeholder: "Enter your username" %>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-lg-1 col-sm-2 col-form-label">
+          <%= f.label :email %>
+        </label> 
+        <div class="col-sm-6">
+          <%= f.email_field :email, class: "form-control", placeholder: "Enter your email" %>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-lg-1 col-sm-2 col-form-label">
+          <%= f.label :password %>
+        </label> 
+        <div class="col-sm-6">
+          <%= f.password_field :password, class: "form-control", placeholder: "Enter your your password" %>
+        </div>
+      </div>
+
+      <div class="article-button">
+        <%= f.submit(@user.new_record? ? "Sign up" : "Update", class: "btn btn-outline-info btn-md offset-sm-2 offset-lg-1") %> 
+      </div>
+
+    <%end%>
+  
+  </div>
+</div>
